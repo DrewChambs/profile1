@@ -87,6 +87,18 @@
             cursor: pointer;
             padding: 0 2rem;
         }
+        .container {
+            display: grid;
+            gap: 5px;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            /* grid-template-rows: repeat(3, 100px); */
+            grid-auto-rows: 100px;
+        }
+        .container > div {
+           background-color: blue;
+           border: 5px solid red;
+           border-radius: 15px;
+        }
 
         @media (max-width: 600px) {
         .header {
