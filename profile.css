@@ -2,11 +2,13 @@
       
       
       
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
+      *,
+        ::before,
+        ::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
       :root {
         font-family: sans-serif;
@@ -184,9 +186,10 @@
         .split {
           padding: 1rem 2rem;
           display: grid;
-          grid-template-columns: 1fr;
+          grid-template-columns: repeat(12, 1fr);
           grid-template-rows: 1fr 1fr 1fr;
         }
+        
         .heading h1 {
           font-size: 2rem;
           font-weight: bold;
