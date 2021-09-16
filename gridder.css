@@ -24,7 +24,7 @@
         }
         .logo {
             font-size: 2rem;
-            padding: 1rem;
+            padding: 1rem 2rem;
             color: #fff;
         }
        
@@ -82,7 +82,7 @@
             text-transform: capitalize;
             text-decoration: underline;
             cursor: pointer;
-            padding: 0 1rem;
+            padding: 0 2rem;
         }
 
         @media (max-width: 600px) {
