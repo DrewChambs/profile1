@@ -78,7 +78,8 @@
         width: 90%;
         color: #fff;
         top: 30%;
-        left: 2vw;
+        /* left: 2vw; */
+        padding-left: 2rem;
         /* Center on screen */
         /* transform: translate(-50%, 50%); */
         /* text-align: center; */
@@ -115,7 +116,7 @@
       .logo {
         margin-top: 25px;
         display: inline-block;
-        padding: 1rem 2rem 0.5rem;
+        padding: 1rem 2.2rem 0.5rem;
         color: #fff;
         font-size: 3rem;
         text-transform: capitalize;
