@@ -179,6 +179,21 @@
       .mainStuff {
         overflow-x: hidden;
       }
+
+      .btnMenu {
+            display: none;
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            font-size: 1rem;
+            text-transform: capitalize;
+            text-decoration: underline;
+            cursor: pointer;
+            padding: 0 2rem;
+            z-index: 10;
+
+        }
+      
       /************** Media Queries **************/
       @media (max-width: 600px) {
         .links {
@@ -197,6 +212,10 @@
         }
         .logo {
           font-size: 2rem;
+        }
+        .btnMenu {
+            display: inline-block;
+            padding-top: 30px;
         }
       }
       /************** End Media Queries **********/
