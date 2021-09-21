@@ -84,8 +84,12 @@
         /* transform: translate(-50%, 50%); */
         /* text-align: center; */
       }
-      .heading h1 {
+      .heading h2{
         font-size: 5rem;
+        font-weight: bold;
+      }
+      .heading h3 {
+        font-size: 4rem;
         font-weight: bold;
       }
 
