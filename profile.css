@@ -1,226 +1,220 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-      
-      
-      
-      *,
-        ::before,
-        ::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+:root {
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
 
-      :root {
-        font-family: sans-serif;
-        text-transform: capitalize;
-      }
+.hero {
+  height: 100vh;
+  background-image: url(images/pexelsCity.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+  padding: 1rem;
+}
+/* Set overlay color to reduce image brightness 9/11/21 */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* End overlay color styline *****************************/
 
-      .hero {
-        height: 100vh;
-        background-image: url(images/pexelsCity.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        max-width: 100%;
-      }
-      /* Set overlay color to reduce image brightness 9/11/21 */
-      .hero::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.4);
-      }
-      /* End overlay color styline *****************************/
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+.links {
+  text-align: right;
+  flex: 1;
+}
+nav .links li {
+  display: inline-block;
+  position: relative;
+  padding: 60px 15px 0;
+}
 
-      nav {
-        display: flex;
-        justify-content: space-between;
-      }
-      .links {
-        text-align: right;
-        flex: 1;
-      }
-      nav .links li {
-        display: inline-block;
-        position: relative;
-        padding: 60px 15px 0;
-      }
+/* Bottom Border */
+nav .links li::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  display: block;
+  transition: 250ms;
+  margin: auto;
+  background-color: yellow;
+}
+nav .links li:hover:after {
+  width: 100%;
+}
+/* End Bottom Border */
 
-      /* Bottom Border */
-      nav .links li::after {
-        content: "";
-        width: 0%;
-        height: 3px;
-        display: block;
-        transition: 250ms;
-        margin: auto;
-        background-color: yellow;
-      }
-      nav .links li:hover:after {
-        width: 100%;
-      }
-      /* End Bottom Border */
+li {
+  list-style-type: none;
+}
 
-      li {
-        list-style-type: none;
-      }
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
 
-      a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 1rem;
-      }
-      .heading {
-        position: absolute;
-        width: 90%;
-        color: #fff;
-        top: 30%;
-        /* left: 2vw; */
-        padding-left: 2rem;
-        /* Center on screen */
-        /* transform: translate(-50%, 50%); */
-        /* text-align: center; */
-      }
-      .heading h2{
-        font-size: 5rem;
-        font-weight: bold;
-      }
-      .heading h3 {
-        font-size: 4rem;
-        font-weight: bold;
-      }
+/* NAME AND CARREER STYLES 10-5-21 **********/
 
-      .heading p {
-        font-size: 1rem;
-        line-height: 1.5;
-        padding: 10px 0 35px;
-      }
+.heading {
+  position: absolute;
+  width: 90%;
+  color: #fff;
+  top: 30%;
+  /* left: 2vw; */
+  padding-left: 2rem;
+  /* Center on screen */
+  /* transform: translate(-50%, 50%); */
+  /* text-align: center; */
+}
+.heading h2 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.heading h3 {
+  font-size: 3rem;
+  font-weight: bold;
+}
 
-      /* Button Styles 9/10/21 */
-      .btn {
-        background-color: rgb(206, 118, 19);
-        cursor: pointer;
-        font-weight: bold;
-        padding: 10px 20px;
-        font-size: 1.2rem;
-        border: none;
-        display: inline-block;
-        transition: 500ms;
-        transform-origin: left;
-      }
-      .btn:hover {
-        transform: scaleX(1.1);
-      }
-      /* / Button Styles 9/10/21 */
+.heading p {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 10px 0 35px;
+}
+/* END NAME AND CARREER STYLES **********/
 
-      /* LOGO STYLES */
-      .logo {
-        margin-top: 25px;
-        display: inline-block;
-        padding: 1rem 2.2rem 0.5rem;
-        color: #fff;
-        font-size: 3rem;
-        text-transform: capitalize;
-      }
+/* Button Styles 9/10/21 ****************/
+.btn {
+  background-color: rgb(206, 118, 19);
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  display: inline-block;
+  transition: 500ms;
+  transform-origin: left;
+}
+.btn:hover {
+  transform: scaleX(1.1);
+}
+/* / Button Styles 9/10/21 ****************/
 
-      span {
-        color: orange;
-      }
-      /* END LOGO STYLES */
+/* LOGO STYLES ***********************/
+.logo {
+  margin-top: 25px;
+  display: inline-block;
+  padding: 1rem 2.2rem 0.5rem;
+  color: #fff;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+span {
+  color: orange;
+}
+/* END LOGO STYLES *******************/
 
-      /* Move Items to front of display 9/11/21 */
-      .links,
-      .logo,
-      .heading {
-        z-index: 10;
-      }
-      /* End Move Items *************************/
+/* Move Items to front of display 9/11/21 */
+.links,
+.logo,
+.heading {
+  z-index: 10;
+}
+/* End Move Items *************************/
 
-      .about {
-        padding: 40px;
-        text-align: center;
-        font-size: 3rem;
-        color: #fff;
-      }
-      .bottom-section {
-        background-color: rgb(11, 12, 12);
-        overflow-x: hidden;
-        padding-bottom: 5rem;
-      }
+.about_h2 {
+  padding: 40px;
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+}
+.bottom-section {
+  background-color: rgb(80, 82, 82);
+  overflow-x: hidden;
+  padding: 3rem;
+}
 
-      .split {
-        display: flex;
-        /* padding: 3rem; */
-      }
-      .split p {
-        padding: 1rem;
-      }
+.split {
+  display: flex;
+  gap: 1rem;
 
-      /* Set BACKGROUND for paragraphs 9/10/21 */
-      .bg-light {
-        background-color: rgb(179, 171, 171);
-      }
-      .bg-dark {
-        background-color: red;
-        color: #fff;
-      }
-      /*  End BACKGROUND for paragraphs ********/
+  /* padding: 3rem; */
+}
+.split p {
+  padding: 1rem;
+}
 
-      /* ARROWS for dropdown when screen is reduced */
-      .fa-chevron-right {
-        color: #fff;
-        margin: 0;
-        padding: 0;
-        cursor: pointer;
-        position: absolute;
-        top: 150px;
-        left: 25px;
-        z-index: 10;
-      }
-      .mainStuff {
-        overflow-x: hidden;
-      }
+/* Set BACKGROUND for paragraphs 9/10/21 */
+.bg-light {
+  background-color: rgb(179, 171, 171);
+}
+.bg-dark {
+  background-color: red;
+  color: #fff;
+}
+/*  End BACKGROUND for paragraphs ********/
 
-      .btnMenu {
-            display: none;
-            color: #fff;
-            background-color: transparent;
-            border: none;
-            font-size: 1rem;
-            text-transform: capitalize;
-            text-decoration: underline;
-            cursor: pointer;
-            padding: 0 2rem;
-            z-index: 10;
+.btnMenu {
+  display: none;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  text-transform: capitalize;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0 2rem;
+  z-index: 10;
+}
 
-        }
-      
-      /************** Media Queries **************/
-      @media (max-width: 600px) {
-        .links {
-          display: none;
-        }
-        .split {
-          padding: 1rem 2rem;
-          display: grid;
-          grid-template-columns: repeat(12, 1fr);
-          grid-template-rows: 1fr 1fr 1fr;
-        }
-        
-        .heading h1 {
-          font-size: 2rem;
-          font-weight: bold;
-        }
-        .logo {
-          font-size: 2rem;
-        }
-        .btnMenu {
-            display: inline-block;
-            padding-top: 30px;
-        }
-      }
-      /************** End Media Queries **********/
-    
+/************** Media Queries **************/
+/* @media (max-width: 1200px) {
+  .hero {
+    width: 95%;
+  }
+} */
+@media screen and (max-width: 600px) {
+  .links {
+    display: none;
+  }
+  .split {
+    flex-direction: column;
+  }
+
+  .heading h2 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .heading h3 {
+    font-size: 2rem;
+  }
+  .about_h2 {
+    font-size: 2rem;
+  }
+  .logo {
+    font-size: 2rem;
+  }
+  .btnMenu {
+    display: inline-block;
+    padding-top: 30px;
+  }
+}
+
+/************** End Media Queries **********/
